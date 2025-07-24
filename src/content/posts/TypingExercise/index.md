@@ -63,11 +63,11 @@ python main.py
 
 ### 预览
 
-![界面](assets\image.png)
+![界面](assets/image.png)
 
-![运行中](assets\image-2.png)
+![运行中](assets/image-2.png)
 
-![结果](assets\image-1.png)
+![结果](assets/image-1.png)
 
 ### 注意
 
