@@ -4,7 +4,7 @@ published: 2025-02-14
 description: "不寻找现有的开源的PDf编辑器，当前的开源PDF编辑器不够强大，寻求一个windows平台上的强大编辑器，并用wine使用"
 image: ""
 tags: ["Linux","Wine"]
-category: Note
+category: Linux
 draft: false
 ---
 

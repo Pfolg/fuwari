@@ -1,10 +1,10 @@
 ---
 title: 利用玄学解决ubuntu没有WiFi
 published: 2025-03-27
-description: "Ubuntu使用WWiFi功能的尝试"
+description: "Ubuntu使用WiFi功能的尝试"
 image: "image-1.png"
 tags: ["Linux","WiFi","Linux"]
-category: Note
+category: Linux
 draft: false
 ---
 
