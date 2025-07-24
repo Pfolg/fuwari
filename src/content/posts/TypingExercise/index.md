@@ -8,6 +8,9 @@ category: Python
 draft: false
 ---
 
+link: https://github.com/Pfolg/PfolgBlog/tree/master/Passages/TypingExercise
+
+
 这是一款功能简洁的打字练习工具，能够实时追踪输入速度和正确率，通过进度条可视化练习进度，并禁用粘贴功能确保真实训练效果。
 
 核心特点：
@@ -22,7 +25,7 @@ draft: false
 
 该工具适合需要提升打字速度和准确性的用户，界面简洁直观，操作便捷高效。
 
-具体操作请查看本目录下的[演示视频](2025-07-17_10-27-46.mp4)
+具体操作请查看本目录下的演示视频
 
 ### 项目结构
 
