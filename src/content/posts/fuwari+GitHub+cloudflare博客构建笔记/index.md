@@ -184,7 +184,7 @@ git version 2.48.1.windows.1
 
 > 如利用GitHub的deploy功能发布到\<username\>.github.io，我到现在都没整明白。
 
-这里我们直接进入https://dash.cloudflare.com/注册一个账户，具体不细讲了。
+这里我们直接进入https://dash.cloudflare.com/ 注册一个账户，具体不细讲了。
 
 ![](assets/2025-07-24-19-33-14-image.png)
 
@@ -204,7 +204,7 @@ git version 2.48.1.windows.1
 
 ![](assets/2025-07-24-20-41-53-image.png)
 
-我这里是https://fuwari-cu5.pages.dev/，也就是这里的域，有条件的还可以自定义域名。
+我这里是https://fuwari-cu5.pages.dev/ ，也就是这里的域，有条件的还可以自定义域名。
 
 找到位于根目录的文件`astro.config.mjs`，修改：
 
