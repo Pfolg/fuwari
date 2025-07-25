@@ -35,4 +35,8 @@ _The world might be better off without me — and yet I'll keep on living._
 ---
 _Feel free to connect and collaborate!_
 
-> this site powered by [fuwari](https://github.com/saicaca/fuwari)
+> _This site powered by_ 
+> ::github{repo="saicaca/fuwari"}
+> _Head from_ [星尘v4的铸币大头](https://www.pixiv.net/artworks/120181037)
+> 
+> _Comments system powered by_ [giscus](https://giscus.app/zh-CN)
