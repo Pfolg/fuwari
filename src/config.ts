@@ -21,7 +21,7 @@ export const siteConfig: SiteConfig = {
 		position: "center", // Equivalent to object-position, only supports 'top', 'center', 'bottom'. 'center' by default
 		credit: {
 			enable: true, // Display the credit text of the banner image
-			text: "星尘", // Credit text to be displayed
+			text: "星尘 stardust", // Credit text to be displayed
 			url: "https://www.pixiv.net/artworks/99238834", // (Optional) URL link to the original artwork or artist's page
 		},
 	},
@@ -68,6 +68,13 @@ export const profileConfig: ProfileConfig = {
 			// You will need to install the corresponding icon set if it's not already included
 			// `pnpm add @iconify-json/<icon-set-name>`
 			url: "https://space.bilibili.com/515553532",
+		},
+		{
+			name: "Mail",
+			icon: "material-symbols:mail-rounded", // Visit https://icones.js.org/ for icon codes
+			// You will need to install the corresponding icon set if it's not already included
+			// `pnpm add @iconify-json/<icon-set-name>`
+			url: "http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=pfolg@foxmail.com",
 		},
 		{
 			name: "Steam",
