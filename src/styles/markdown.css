@@ -2,11 +2,6 @@
     h1 {
         @apply text-3xl;
     }
-@layer components {
-  .link {
-    @apply text-blue-600 underline; /* 基础链接样式 */
-  }
-}
 
     h1, h2, h3, h4, h5, h6 {
         .anchor {
@@ -25,7 +20,7 @@
     }
 
     a:not(.no-styling) {
-        @apply relative bg-none link font-medium text-[var(--primary)]
+        @apply relative bg-none font-medium text-[var(--primary)]
         underline decoration-[var(--link-underline)] decoration-1 decoration-dashed underline-offset-4;
         box-decoration-break: clone;
         -webkit-box-decoration-break: clone;
