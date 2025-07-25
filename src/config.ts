@@ -70,11 +70,9 @@ export const profileConfig: ProfileConfig = {
 			url: "https://space.bilibili.com/515553532",
 		},
 		{
-			name: "Mail",
-			icon: "material-symbols:mail-rounded", // Visit https://icones.js.org/ for icon codes
-			// You will need to install the corresponding icon set if it's not already included
-			// `pnpm add @iconify-json/<icon-set-name>`
-			url: "http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=pfolg@foxmail.com",
+			name: "GitHub",
+			icon: "fa6-brands:github",
+			url: "https://github.com/Pfolg",
 		},
 		{
 			name: "Steam",
@@ -82,9 +80,9 @@ export const profileConfig: ProfileConfig = {
 			url: "https://steamcommunity.com/profiles/76561199677607305/",
 		},
 		{
-			name: "GitHub",
-			icon: "fa6-brands:github",
-			url: "https://github.com/Pfolg",
+			name: "Mail",
+			icon: "material-symbols:mail-rounded",
+			url: "http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=pfolg@foxmail.com",
 		},
 	],
 };
