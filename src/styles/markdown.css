@@ -2,6 +2,11 @@
     h1 {
         @apply text-3xl;
     }
+@layer components {
+  .link {
+    @apply text-blue-600 underline; /* 基础链接样式 */
+  }
+}
 
     h1, h2, h3, h4, h5, h6 {
         .anchor {
