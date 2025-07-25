@@ -8,6 +8,8 @@ category: Python
 draft: false
 ---
 
+<script defer src="https://cloud.umami.is/script.js" data-website-id="ab57980a-7f02-43fe-ac2a-b0d8613d4217"></script>
+
 # 简单说明
 
 看了 [男人的乐趣：在已激活 Windows 上强行显示「未激活」状态](https://www.bilibili.com/video/BV1X6PLevEJL/)，然后用了一下，发现与小红车不兼容。觉得可以忍，可以用live2DExViewer平替一下，na，今天开机速读变慢，平时CPU占用变高，于是觉得还是得自己动手。之前也找过[MrGlockenspiel/activate-linux](https://github.com/MrGlockenspiel/activate-linux)，这个又不能隐藏终端，麻了。
