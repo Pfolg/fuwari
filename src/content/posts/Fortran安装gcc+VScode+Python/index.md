@@ -130,12 +130,12 @@ https://www.bilibili.com/video/BV195411c71L/?spm_id_from=333.1007.top_right_bar_
     ![](image-17.png)
 
     在文件中写入以下内容：
-    ~~~Fortran
+    ```diff lang="fortran"
     program helloworld
         implicit none
         print*,"hello,world!"
     end program helloworld
-    ~~~
+    ```
     我们试着运行一下这段代码
 
     ![](image-19.png)
