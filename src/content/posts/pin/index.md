@@ -1,5 +1,5 @@
 ---
-title: 【顶置】
+title: 📌【顶置】
 published: 3000-01-01
 description: "用于测试的置顶文章"
 image: "./assets/133074580_p0.jpg"
