@@ -27,6 +27,9 @@ _基于 PySide6 的系统托盘工具应用，主要提供快速启动、文本�
 
 </div>
 
+>[!NOTE]
+>这里的自述文件更新可能不及时，请以仓库下的readme文件为准！
+
 <!-- ![GitHub language count](https://img.shields.io/github/languages/count/Pfolg/QuickTray) -->
 
 # 特点
