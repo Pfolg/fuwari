@@ -2,11 +2,14 @@
 title: QuickTray中文自述文件
 published: 2025-07-30
 description: "QuickTray.README.zh-CN"
-image: ""
+image: "github.svg"
 tags: ["Python","GitHub"]
 category: Python
 draft: false
 ---
+
+> _cover from:_
+> ::github{repo="FortAwesome/Font-Awesome"}
 
 <div align="center">
 
