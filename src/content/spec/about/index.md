@@ -19,9 +19,9 @@ This is the demo site for [Fuwari](https://github.com/saicaca/fuwari).
 
 </div>
 
-- Student
-- Skilled in Python, familiar with Fortran, C#, ~~Dart~~, Live2D, and basic frontend development
-- Studying C++
+- In SiChuan, PRC. Student
+- Skilled in Python, Master a little Fortran, C#, ~~Dart~~,  Live2D, Linux and basic frontend development
+- Now studying C++
 - Hobbies
   - Playing games
   - Creating something 
@@ -35,6 +35,7 @@ _The world might be better off without me — and yet I'll keep on living._
 ---
 _Feel free to connect and collaborate!_
 
+>[!NOTE]
 > _This site powered by_ 
 > ::github{repo="saicaca/fuwari"}
 > _Head from_ [星尘v4的铸币大头](https://www.pixiv.net/artworks/120181037)
