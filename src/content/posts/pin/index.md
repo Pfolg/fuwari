@@ -7,6 +7,7 @@ tags: ["fuwari"]
 category: Pin
 draft: false
 ---
+> [!NOTE]
 > _cover from https://www.pixiv.net/artworks/133074580_
 
 :::Note

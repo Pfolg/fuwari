@@ -7,7 +7,7 @@ tags: ["Python","GitHub"]
 category: Python
 draft: false
 ---
-
+> [!NOTE]
 > _cover from:_
 > ::github{repo="FortAwesome/Font-Awesome"}
 

@@ -8,7 +8,8 @@ category: Note
 draft: false
 ---
 
-> _cover from https://www.pixiv.net/artworks/133051243_
+> [!NOTE]
+> cover from https://www.pixiv.net/artworks/133051243
 
 # 直接看懂
 

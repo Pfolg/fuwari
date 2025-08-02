@@ -7,7 +7,7 @@ tags: ["fuwari"]
 category: Note
 draft: false
 ---
-
+> [!NOTE]
 > _cover from https://www.pixiv.net/artworks/128100750_
 
 # 思路
