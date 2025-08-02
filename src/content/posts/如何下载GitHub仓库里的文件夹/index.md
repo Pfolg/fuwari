@@ -5,7 +5,6 @@ description: "使用DownGit下载GitHub仓库里的文件夹"
 image: "assets/133051243_p0.png"
 tags: ["DownGit","GitHub"]
 category: Note
-Person: "666"
 draft: false
 ---
 
