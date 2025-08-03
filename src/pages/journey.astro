@@ -1,0 +1,328 @@
+---
+import { getEntry, render } from "astro:content";
+import Markdown from "@components/misc/Markdown.astro";
+import I18nKey from "../i18n/i18nKey";
+import { i18n } from "../i18n/translation";
+import MainGridLayout from "../layouts/MainGridLayout.astro";
+
+const journeyPost = await getEntry("spec", "journey");
+
+if (!journeyPost) {
+	throw new Error("journey page content not found");
+}
+
+const { Content } = await render(journeyPost);
+
+// 提取时间线数据
+interface TimelineItem {
+	title: string;
+	date: string;
+	icon: string | null;
+	description: string;
+}
+
+const timelineItems: TimelineItem[] = [];
+const timelineRegex = /:::\s*timeline([\s\S]*?):::/g;
+const bodyContent = journeyPost.body || "";
+const matches = Array.from(bodyContent.matchAll(timelineRegex));
+
+// 避免在表达式中赋值
+for (const match of matches) {
+	const content = match[1].trim();
+
+	// 提取元数据 - 使用更安全的方式处理可能的 undefined
+	const titleMatch = content.match(
+		/title:\s*"([^"]+)"|title:\s*'([^']+)'|title:\s*(\S+)/,
+	);
+	const dateMatch = content.match(
+		/date:\s*"([^"]+)"|date:\s*'([^']+)'|date:\s*(\S+)/,
+	);
+	const iconMatch = content.match(
+		/icon:\s*"([^"]+)"|icon:\s*'([^']+)'|icon:\s*(\S+)/,
+	);
+
+	// 提取描述内容
+	const separatorIndex = content.indexOf("---");
+	let description = "";
+
+	if (separatorIndex !== -1) {
+		description = content.slice(separatorIndex + 3).trim();
+	} else {
+		// 如果没有分隔符，尝试提取第一个换行后的内容
+		const firstNewLine = content.indexOf("\n");
+		if (firstNewLine !== -1) {
+			description = content.slice(firstNewLine).trim();
+		}
+	}
+
+	if (titleMatch && dateMatch) {
+		// 确保所有值都是字符串
+		const title = (
+			titleMatch[1] ||
+			titleMatch[2] ||
+			titleMatch[3] ||
+			""
+		).toString();
+		const date = (
+			dateMatch[1] ||
+			dateMatch[2] ||
+			dateMatch[3] ||
+			""
+		).toString();
+		const icon = iconMatch
+			? (iconMatch[1] || iconMatch[2] || iconMatch[3] || "").toString()
+			: null;
+
+		timelineItems.push({
+			title,
+			date,
+			icon,
+			description,
+		});
+	}
+}
+
+// 按日期排序（从新到旧）使用时间戳比较
+timelineItems.sort(
+	(a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+);
+---
+<MainGridLayout title={i18n(I18nKey.about)} description={i18n(I18nKey.about)}>
+    <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32">
+        <div class="card-base z-10 px-9 py-6 relative w-full ">
+            <Markdown class="mt-2">
+              <div class="header">以下是我的大致编程经历，持续更新中~</div>
+  <div class="journey-container">
+    <!-- 页面介绍内容 -->
+    <!-- <div class="page-intro">
+      <Content/>
+    </div> -->
+    
+    
+    <!-- 时间线部分 -->
+    <div class="timeline">
+      {timelineItems.length > 0 ? (
+        timelineItems.map((item, index) => (
+          <div class={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                {item.icon && <span class="icon">{item.icon}</span>}
+                <h3>{item.title}</h3>
+                <div class="date">{item.date}</div>
+              </div>
+              <div class="description">
+                <!-- 修复 Markdown 组件类型错误 -->
+                <Markdown class="description-content">{item.description}</Markdown>
+              </div>
+            </div>
+          </div>
+        ))
+      ) : (
+        <div class="no-timeline-items">
+          <p>No timeline items found. Please add timeline blocks to your Markdown file.</p>
+        </div>
+      )}
+    </div>
+  </div>
+  
+<style lang="scss" is:global>
+  .header{
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+  }
+  .journey-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  .page-intro {
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+    
+    h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: var(--color-heading);
+    }
+    
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--color-text);
+      max-width: 800px;
+      margin: 0 auto 1.5rem;
+    }
+  }
+  
+  .timeline {
+    position: relative;
+    padding: 2rem 0;
+    
+    /* 时间线 - 垂直线 (确保显示) */
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 4px;
+      background: var(--color-primary);
+      transform: translateX(-50%);
+      z-index: 4;
+    }
+  }
+  
+   .timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    display: flex;
+    width: 100%;
+    
+    /* 时间点标记 - 确保显示的关键 */
+    &::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    display: block;
+    background: var(--color-primary, #3498db); /* 添加默认值 */
+    
+    /* 三层设计确保可见性 */
+    box-shadow:
+      0 0 0 3px var(--color-card-bg, #ffffff),
+      0 0 0 5px var(--color-primary, #3498db);
+    
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+  }
+
+
+    /* 悬停效果增强 */
+    &:hover::after {
+      transform: translateX(-50%) scale(1.1);
+      box-shadow:
+        0 0 0 3px var(--color-card-bg, #ffffff),
+        0 0 0 5px var(--color-primary, #3498db);
+    }
+    
+    &.left {
+      justify-content: flex-start;
+    }
+    
+    &.right {
+      justify-content: flex-end;
+    }
+  }
+  
+  .timeline-content {
+    width: calc(50% - 3rem);
+    padding: 1.5rem;
+    background: var(--color-card-bg);
+    border-radius: var(--radius-large);
+    box-shadow: var(--shadow-md);
+    position: relative;
+    z-index: 3; /* 高于时间点和时间线 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      background-color: rgb(218, 233, 243);
+    }
+  }  
+  .timeline-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    
+    h3 {
+      margin: 0;
+      font-size: 1.25rem;
+      color: var(--color-heading);
+      flex-grow: 1;
+    }
+    
+    .icon {
+      font-size: 1.5rem;
+      margin-right: 0.75rem;
+    }
+    
+    .date {
+      background: var(--color-bg-muted);
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 30px;
+      color: var(--color-text-muted);
+    }
+  }
+  
+  .description {
+    line-height: 1.6;
+    color: var(--color-text);
+    
+    p {
+      margin: 0.5rem 0;
+    }
+    
+    ul, ol {
+      padding-left: 1.25rem;
+      margin: 0.75rem 0;
+    }
+    
+    li {
+      margin-bottom: 0.25rem;
+    }
+    
+    .description-content {
+      /* Markdown 内容特定样式 */
+    }
+  }
+  
+  /* 响应式设计 - 移动端调整时间点位置 */
+  @media (max-width: 768px) {
+    .timeline::before {
+      left: 1.5rem;
+    }
+    
+    .timeline-item {
+      &::after {
+        left: 1.5rem; /* 对齐移动端时间线 */
+        transform: translateX(0); /* 移除水平居中 */
+      }
+      
+      &:hover::after {
+        transform: scale(1.1); /* 调整悬停效果 */
+      }
+    }
+  
+    
+    .timeline-content {
+      width: calc(100% - 2.5rem);
+      
+      /* 移动端统一箭头方向（向左） */
+      &::before {
+        left: -15px !important;
+        right: auto !important;
+        border-width: 10px 15px 10px 0 !important;
+        border-color: transparent var(--color-card-bg) transparent transparent !important;
+      }
+    }
+  }
+  
+  .no-timeline-items {
+    text-align: center;
+    padding: 2rem;
+    background: var(--color-bg-muted);
+    border-radius: var(--radius-large);
+    margin-top: 2rem;
+  }
+</style>
+</Markdown>
+        </div>
+    </div>
+</MainGridLayout>
