@@ -106,3 +106,11 @@ icon: "🦐"
 ---
 使用fuwari建立博客网站，开始学习C++，想用C++的Qt重写QuickTray，未来可能会使用这门语言进行跨平台开发。
 :::
+
+::: timeline
+title: RenPy
+date: 2025-06
+icon: "🛹"
+---
+本想用PySide6做一个GalGame框架，后停滞。初识RenPy，7月时利用豆包AI复刻了《小狗帕波和小猫布斯的故事》。
+:::
