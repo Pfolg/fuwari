@@ -68,6 +68,16 @@ const jsonLd = {
                         {remarkPluginFrontmatter.minutes} {" " + i18n(remarkPluginFrontmatter.minutes === 1 ? I18nKey.minuteCount : I18nKey.minutesCount)}
                     </div>
                 </div>
+                <!--views & visitors-->
+                <div class="flex flex-row items-center">
+                    <div class="transition h-6 w-6 rounded-md bg-black/5 dark:bg-white/10 text-black/50 dark:text-white/50 flex items-center justify-center mr-2">
+                        <Icon name="material-symbols:visibility-outline-rounded"></Icon>
+                    </div>
+                    <div class="text-sm">
+                        <span id="post-views">loading...</span>&ensp;
+                        <span id="unique-visitors"></span>
+                    </div>
+                </div>
             </div>
 
             <!-- title -->
@@ -137,3 +147,26 @@ const jsonLd = {
     <Comments client:only="svelte"></Comments>
 
 </MainGridLayout>
+
+
+<script>
+// 使用Busuanzi（不蒜子）的免费统计服务
+document.addEventListener('DOMContentLoaded', function() {
+  // 阅读量统计
+  const viewsElement = document.getElementById('post-views');
+  if (viewsElement) {
+    viewsElement.innerHTML = `Views: <span id="busuanzi_value_page_pv">0</span>`;
+  }
+  
+  // 访客数统计
+  const visitorsElement = document.getElementById('unique-visitors');
+  if (visitorsElement) {
+    visitorsElement.innerHTML = `Visitors: <span id="busuanzi_value_page_uv">0</span>`;
+  }
+});
+</script>
+
+<!-- 引入不蒜子统计脚本 -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
