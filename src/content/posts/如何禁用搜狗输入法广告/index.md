@@ -1,7 +1,7 @@
 ---
-title: 如何禁用搜狗流氓
+title: 如何禁用搜狗输入法广告
 published: 2025-07-19
-description: "利用Windows组策略禁用搜狗输入法的流氓行为"
+description: "利用Windows组策略禁用搜狗输入法的广告"
 image: ""
 tags: ["Windows","组策略","输入法","流氓软件"]
 category: Note
