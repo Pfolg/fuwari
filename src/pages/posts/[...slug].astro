@@ -2,6 +2,7 @@
 import path from "node:path";
 import License from "@components/misc/License.astro";
 import Markdown from "@components/misc/Markdown.astro";
+import Comments from "@components/widget/Comments.svelte";
 import I18nKey from "@i18n/i18nKey";
 import { i18n } from "@i18n/translation";
 import MainGridLayout from "@layouts/MainGridLayout.astro";
@@ -13,7 +14,6 @@ import ImageWrapper from "../../components/misc/ImageWrapper.astro";
 import PostMetadata from "../../components/PostMeta.astro";
 import { profileConfig, siteConfig } from "../../config";
 import { formatDateToYYYYMMDD } from "../../utils/date-utils";
-import Comments from '@components/widget/Comments.svelte'
 
 export async function getStaticPaths() {
 	const blogEntries = await getSortedPosts();
@@ -143,7 +143,11 @@ const jsonLd = {
             </div>}
         </a>
     </div>
-
+    <br>
+    <div style="text-align: center;font-style: italic;color: rgb(155, 151, 151);">
+    请自觉遵守互联网法规及本站评论规则。文明发言，理性交流。违规评论将被删除。
+    </div>
+    <br>
     <Comments client:only="svelte"></Comments>
 
 </MainGridLayout>
@@ -168,5 +172,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <!-- 引入不蒜子统计脚本 -->
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
 
 
