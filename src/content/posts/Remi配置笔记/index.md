@@ -93,3 +93,19 @@ _然后基本配置就完成了。_
 工具：https://downgit.github.io/#/home
 
 当然，我倒是希望你们能自己会配置，大佬的话随意。
+
+
+>[!NOTE]
+> **参考链接**
+> 
+> [小狼毫&雾凇拼音安装及部署-Windows（图文）](https://www.cnblogs.com/HookDing/p/17949199)
+> 
+> [小狼毫输入法_修改模糊音设置](https://www.bilibili.com/opus/1001891221657878535)
+> 
+> [Rime 配置：雾凇拼音](https://dvel.me/posts/rime-ice/#%e6%96%b0%e6%89%8b%e6%8c%87%e5%bc%95)
+> 
+> [中州韻輸入法引擎/下載及安裝](https://rime.im/download/)
+> 
+> ::github{repo="rime/weasel"}
+> 
+> ::github{repo="iDvel/rime-ice"}
