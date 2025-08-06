@@ -3,7 +3,7 @@ title: RIME配置笔记
 published: 2025-08-05
 description: "开源输入法小狼毫 + 雾凇拼音Windows配置：基本设置、皮肤、模糊音"
 image: "assets/10554324.png"
-tags: ["REMI","输入法","Windows"]
+tags: ["RIME","输入法","Windows"]
 category: Note
 draft: false
 ---
@@ -11,7 +11,7 @@ draft: false
 > [!NOTE]
 > _cover from [rime/weasel](https://github.com/rime/weasel/)_
 
-**为什么选择REMI？**
+**为什么选择RIME？**
 
 _因为其他输入法不能满足需求或者某些需求过剩。_
 
@@ -80,7 +80,7 @@ _然后基本配置就完成了。_
 
 # 体验
 
-至此，你完成了REMI的基本设定，可以享受绿色宁静的码字过程了：
+至此，你完成了RIME的基本设定，可以享受绿色宁静的码字过程了：
 
 ![](assets/image-5.png)
 
