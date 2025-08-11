@@ -596,26 +596,18 @@ if __name__ == '__main__':
 > **Cover**
 > 
 > ASJC 最も人気のあるの日本語曲《I Miss You》がリリースされ、
-> ASJC 最受欢迎的日语歌曲《我想你》发行，
-> 以下のプラットフォームで聴くことができます。  您可以在以下平台上收听：
-> 
-> Full MV : https://youtu.be/Eur8P7Nku9A
-> 完整 MV：https://youtu.be/Eur8P7Nku9A
-> 
-> KKBOX : https://kkbox.fm/VaIRl5
-> KKBOX ： https://kkbox.fm/VaIRl5
-> 
-> YT Music : https://music.youtube.com/playlist?list=OLAK5uy_nRhhgO2VyOwqw6bxWBFkg9QhaguIqrQsI
-> YT 音乐：https://music.youtube.com/playlist?list=OLAK5uy_nRhhgO2VyOwqw6bxWBFkg9QhaguIqrQsI
-> 
-> Spotify : https://open.spotify.com/album/4HPurCZhsb6suc2aRUZPMa
-> Spotify ： https://open.spotify.com/album/4HPurCZhsb6suc2aRUZPMa
-> 
-> Apple Music : https://music.apple.com/album/1799128465
-> 苹果音乐：https://music.apple.com/album/1799128465
-> 
-> Amazon : https://music.amazon.co.uk/albums/B0DDRND9ZW?marketplaceId=A1F83G8C2ARO7P&musicTerritory=GB&>ref=dm_sh_epFPtLDjZPO0uoG0NW5VPFXuh
-> 亚马逊：https://music.amazon.co.uk/albums/B0DDRND9ZW?marketplaceId=A1F83G8C2ARO7P&musicTerritory=GB&>ref=dm_sh_epFPtLDjZPO0uoG0NW5VPFXuh
-> 
-> 「ASJC is available now on Spotify、Amazon Music、Apple Music、Youtube Music、KKBOX 」
-> 「ASJC 现已在 Spotify、Amazon Music、Apple Music、Youtube Music、KKBOX 上架 」
+>以下のプラットフォームで聴くことができます。
+>
+>Full MV : https://youtu.be/Eur8P7Nku9A
+>
+>KKBOX : https://kkbox.fm/VaIRl5
+>
+>YT Music : https://music.youtube.com/playlist?list=OLAK5uy_nRhhgO2VyOwqw6bxWBFkg9QhaguIqrQsI
+>
+>Spotify : https://open.spotify.com/album/4HPurCZhsb6suc2aRUZPMa
+>
+>Apple Music : https://music.apple.com/album/1799128465
+>
+>Amazon : https://music.amazon.co.uk/albums/B0DDRND9ZW?marketplaceId=A1F83G8C2ARO7P&musicTerritory=GB&>ref=dm_sh_epFPtLDjZPO0uoG0NW5VPFXuh
+>
+>「ASJC is available now on Spotify、Amazon Music、Apple Music、Youtube Music、KKBOX 」
