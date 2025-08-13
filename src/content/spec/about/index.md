@@ -26,9 +26,10 @@ This is the demo site for [Fuwari](https://github.com/saicaca/fuwari).
   - Playing games
   - Creating something 
 
+
 <div align="center">
 
-_The world might be better off without me — and yet I'll keep on living._
+_于二进制潮汐涨落之间求索……_
 
 </div>
 
