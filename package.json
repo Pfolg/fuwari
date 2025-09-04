@@ -63,7 +63,7 @@
   "devDependencies": {
     "@astrojs/ts-plugin": "^1.10.4",
     "@biomejs/biome": "2.1.2",
-    "@iconify-json/material-symbols": "^1.2.32",
+    "@iconify-json/material-symbols": "^1.2.34",
     "@iconify-json/tabler": "^1.2.22",
     "@rollup/plugin-yaml": "^4.1.2",
     "@types/hast": "^3.0.4",
