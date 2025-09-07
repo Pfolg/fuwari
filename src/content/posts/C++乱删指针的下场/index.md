@@ -7,6 +7,9 @@ tags: ["Qt","C++/Qt"]
 category: Daily
 draft: false
 ---
+>[!NOTE]
+>_Cover from pixiv (maybe)_
+
 
 ![](PixPin_2025-09-07_18-32-09_20250907190847724545.png)
 
