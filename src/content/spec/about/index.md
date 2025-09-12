@@ -20,8 +20,7 @@ This is the demo site for [Fuwari](https://github.com/saicaca/fuwari).
 </div>
 
 - In SiChuan, PRC. Student
-- Skilled in Python, Master a little Fortran, C#, ~~Dart~~,  Live2D, Linux and basic frontend development
-- Now studying C++
+- Skilled in Python, Master a little C++, Fortran, C#, ~~Dart~~,  Live2D, Linux and basic frontend development
 - Hobbies
   - Playing games
   - Creating something 
